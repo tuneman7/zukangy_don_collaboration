@@ -2,14 +2,16 @@
 
 To pull down and run final project:
 
-git clone https://github.com/tuneman7/zukangy_don_collaboration && cd ./zukangy_don_collaboration/ && . run205final.sh
+This will not work on an ARM / M1 / M2 box as the images are for the X86 architecture.
+
 
 Get on your AWS linux box, then run the following command (it will prompt you for your credentials on that box).
 
-``
+```
+
 git clone https://github.com/tuneman7/zukangy_don_collaboration && cd ./zukangy_don_collaboration/ && . run205final.sh
 
-``
+```
 
 Alternatively -- you can execute each of the commands independently.
 
