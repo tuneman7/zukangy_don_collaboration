@@ -5,5 +5,5 @@ echo "***************************"
 echo " RUN THIS PROJECT AS ROOT"
 echo "***************************"
 
-sudo . run.sh
+sudo ./run.sh
 
