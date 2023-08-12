@@ -7,4 +7,4 @@
 
 python generate_commands_from_templates.py
 
-. dd.sh
+./dd.sh
