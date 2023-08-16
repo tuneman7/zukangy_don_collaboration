@@ -25,6 +25,12 @@ def main():
     bash_text           = bash_template_text.replace("<project_dir_token>","/w205/")
     u.write_text_to_file(bash_outfile,bash_text)
 
+    es_template       = os.path.join(u.get_this_dir(),"es.template")
+    es_outfile        = os.path.join(u.get_this_dir(),"es.sh")
+    this_directory    = u.get_this_dir()
+    es_template_text  = u.get_data_from_file(bash_template)
+    es_text           = bash_template_text.replace("<project_dir_token>","/w205/")
+    u.write_text_to_file(bash_outfile,bash_text)
 
 
 main()

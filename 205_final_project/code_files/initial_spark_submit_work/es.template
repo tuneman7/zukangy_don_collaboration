@@ -1,0 +1,1 @@
+  docker-compose exec presto presto --server presto:8080 --catalog hive --schema default -f <project_dir_token>query_hive_tables.hql 
