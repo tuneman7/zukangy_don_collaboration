@@ -4,8 +4,8 @@
   "notebook_dir": "/w205",
   "password": false,
   "pid": 1,
-  "port": 8888,
+  "port": 5555,
   "secure": false,
-  "token": "81622d943ba6e41902358be5be18659c69175619e935c258",
-  "url": "http://0.0.0.0:8888/"
+  "token": "640430dddf60a379a2967845f1be9f50eedd91b0c1f8abb7",
+  "url": "http://0.0.0.0:5555/"
 }
