@@ -1,3 +1,4 @@
+#!/bin/bash
 deactivate
 rm -rf ./jn
 python -m venv jn
