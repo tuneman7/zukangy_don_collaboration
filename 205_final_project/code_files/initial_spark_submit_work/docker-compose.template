@@ -92,11 +92,11 @@ services:
       - <project_dir_token>:/w205
     expose:
       - "5000"
-      - "8888"
+      - "5555"
     ports:
       - "5000:5000"
-      - "8888:5555"
+      - "5555:5555"
     extra_hosts:
       - "moby:127.0.0.1"
-    command: jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+    command: jupyter notebook --no-browser --port 5555 --ip 0.0.0.0 --allow-root
 
