@@ -2,10 +2,10 @@
   "base_url": "/",
   "hostname": "0.0.0.0",
   "notebook_dir": "/w205",
-  "password": false,
+  "password": true,
   "pid": 1,
   "port": 5555,
   "secure": false,
-  "token": "640430dddf60a379a2967845f1be9f50eedd91b0c1f8abb7",
+  "token": "",
   "url": "http://0.0.0.0:5555/"
 }
