@@ -1,5 +1,7 @@
 #!/bin/bash
+echo "deactivate"
 deactivate
+echo "bozo"
 rm -rf ./jn
 python -m venv jn
 #ubuntu / OSX
