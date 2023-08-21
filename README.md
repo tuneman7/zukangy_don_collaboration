@@ -26,3 +26,8 @@ cd ./zukangy_don_collaboration/
 ```
 . run205final.sh
 ```
+
+```
+sudo su
+apt update && apt install docker -y && apt install docker-compose -y && apt install git -y && apt install python-is-python3 -y
+```
