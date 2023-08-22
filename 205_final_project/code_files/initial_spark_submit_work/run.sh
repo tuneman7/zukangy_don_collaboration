@@ -7,7 +7,7 @@
 
 #modify yaml to be environment specific
 #make bash file environment specific.
-python generate_commands_from_templates.py
+python generate_commands_from_templates.py >/dev/null
 
 #shut down docker compose.
 . ./dcd.sh
