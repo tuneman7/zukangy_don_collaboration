@@ -10,6 +10,6 @@
 python generate_commands_from_templates.py
 
 #shut down docker compose.
-. dcd.sh
+. ./dcd.sh
 #bring the juice
-. dd.sh
+. ./dd.sh
