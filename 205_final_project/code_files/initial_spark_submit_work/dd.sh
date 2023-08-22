@@ -18,8 +18,6 @@ sleep 3
 docker-compose exec kafka kafka-topics --create --topic event_parameters --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
 echo "sleeping"
 sleep 4
-rm log_file1.txt
-echo " ">log_file1.txt
 
 #spin up API endpoint flask container.
 docker-compose exec mids env FLASK_APP=/w205/game_api.py flask run >/dev/null &
@@ -49,7 +47,7 @@ echo "press and HOLD CTL+C to terminate:"
 x=1
 while [ $x -le 500 ]
 do
-  python primative_event_pitcher_ab_2.py >/dev/nulll
+  python primative_event_pitcher_ab_2.py >/dev/null
   docker-compose exec mids curl http://localhost:5000/shutdown
   docker-compose exec mids env FLASK_APP=/w205/game_api.py flask run >/dev/null  &
   docker-compose exec presto presto --server presto:8080 --catalog hive --schema default -f /w205/query_hive_tables.hql 
