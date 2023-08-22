@@ -9,6 +9,8 @@
 #make bash file environment specific.
 python generate_commands_from_templates.py
 
+chmod 777 -R ./
+
 #shut down docker compose.
 . ./dcd.sh
 #bring the juice
