@@ -22,7 +22,7 @@ rm log_file1.txt
 echo " ">log_file1.txt
 
 #spin up API endpoint flask container.
-docker-compose exec mids env FLASK_APP=/w205/game_api.py flask run >> log_file1.txt &
+docker-compose exec mids env FLASK_APP=/w205/game_api.py flask run >/dev/null &
 echo "sleeping"
 sleep 4
 echo "copying config files over"
@@ -44,14 +44,14 @@ docker-compose exec cloudera hadoop fs -ls /tmp/
 
 
 #echo "Run primative event pitcher/generator primative_event_pitcher.py"
-echo "python primative_event_pitcher_ab.py > log_event_pitcher.txt"
+echo "python primative_event_pitcher_ab.py >/dev/null
 echo "press and HOLD CTL+C to terminate:"
 x=1
 while [ $x -le 500 ]
 do
-  python primative_event_pitcher_ab_2.py >> log_event_pitcher.txt
+  python primative_event_pitcher_ab_2.py >/dev/nulll
   docker-compose exec mids curl http://localhost:5000/shutdown
-  docker-compose exec mids env FLASK_APP=/w205/game_api.py flask run >> log_file1.txt &
+  docker-compose exec mids env FLASK_APP=/w205/game_api.py flask run >/dev/null  &
   docker-compose exec presto presto --server presto:8080 --catalog hive --schema default -f /w205/query_hive_tables.hql 
   sleep 2
   echo "press and HOLD CTL+C to terminate:"
