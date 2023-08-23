@@ -20,22 +20,22 @@ echo "sleeping"
 sleep 4
 
 #spin up API endpoint flask container.
-docker-compose exec mids env FLASK_APP=<project_dir_token>game_api.py flask run >/dev/null &
+docker-compose exec -T mids env FLASK_APP=<project_dir_token>game_api.py flask run 2>/dev/null &
 echo "sleeping"
 sleep 4
 echo "copying config files over"
-echo "docker-compose exec spark bash -c \"cp <project_dir_token>log4j.properties ./conf/log4j.properties\""
-docker-compose exec spark bash -c "cp <project_dir_token>log4j.properties ./conf/log4j.properties"
+echo "docker-compose exec -T spark bash -c \"cp <project_dir_token>log4j.properties ./conf/log4j.properties\""
+docker-compose exec -T spark bash -c "cp <project_dir_token>log4j.properties ./conf/log4j.properties"
 
 
 echo "doing the spark submit"
-echo "docker-compose exec spark spark-submit <project_dir_token>separate_events_stream_2.py"
+echo "docker-compose exec -T spark spark-submit <project_dir_token>separate_events_stream_2.py"
 
-docker-compose exec spark spark-submit <project_dir_token>separate_events_stream_2.py &
+docker-compose exec -T spark spark-submit <project_dir_token>separate_events_stream_2.py &
 
 #create hive tables
-echo "docker-compose exec cloudera hive -f <project_dir_token>hive_table_creation.hql"
-docker-compose exec cloudera hive -f <project_dir_token>hive_table_creation.hql 
+echo "docker-compose exec -T cloudera hive -f <project_dir_token>hive_table_creation.hql"
+docker-compose exec -T cloudera hive -f <project_dir_token>hive_table_creation.hql 
 
 
 docker-compose exec cloudera hadoop fs -ls /tmp/
@@ -48,8 +48,8 @@ x=1
 while [ $x -le 500 ]
 do
   python primative_event_pitcher_ab_2.py >/dev/null
-  docker-compose exec mids curl http://localhost:5000/shutdown
-  docker-compose exec mids env FLASK_APP=<project_dir_token>game_api.py flask run >/dev/null &
+  docker-compose exec -T mids curl http://localhost:5000/shutdown
+  docker-compose exec -T mids env FLASK_APP=<project_dir_token>game_api.py flask run 2>/dev/null &
   docker-compose exec presto presto --server presto:8080 --catalog hive --schema default -f <project_dir_token>query_hive_tables.hql 
   sleep 2
   echo "press and HOLD CTL+C to terminate:"
