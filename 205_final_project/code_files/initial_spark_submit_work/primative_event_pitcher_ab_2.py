@@ -34,7 +34,7 @@ def main():
         g_randint = random.randint(0,len(guild_names)-1)
         s_randint = random.randint(0,len(sword_types)-1)
         b_randint = random.randint(0,40)
-        base      = 'docker-compose exec mids ab -n {} -H "Host: user2.att.com" http://localhost:5000/'.format(b_randint)
+        base      = 'docker-compose exec -T mids ab -n {} -H "Host: user2.att.com" http://localhost:5000/'.format(b_randint)
 
         
         if events[e_randint] =='join_a_guild':
