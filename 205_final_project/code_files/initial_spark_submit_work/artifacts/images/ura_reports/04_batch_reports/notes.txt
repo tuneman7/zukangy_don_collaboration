@@ -1,0 +1,4 @@
+This looks as if it may be reports of transmitted data to EP.
+We need clarification on the product numbering scheme here.
+Will speak with Kevin about this.
+Unsure if anything will need to change with this other than perhaps the inclusion of MPM numbers.

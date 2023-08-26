@@ -1,0 +1,4 @@
+Note "Smart numbering".
+We have the date fields within PTV PARIS.
+This report will require work.
+Will likely need to add filter in criteria between PTV titles and non-PTV titles.

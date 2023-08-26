@@ -1,0 +1,3 @@
+"Smart-numbering".
+We must import air-date history from PTV PARIS.
+We must test manual air-date additions for PTV imported titles.  -- Manual entries appear to be the pattern.

@@ -1,0 +1,4 @@
+Unsure about the concept of "cycles".  Require informaiton from Kevin or Business on this.
+Once again note "smart numbering" on this.
+May need to add MPM for usefullness for differentiating non PTV and PTV titles.
+Perhaps add PTV filter to criteria.

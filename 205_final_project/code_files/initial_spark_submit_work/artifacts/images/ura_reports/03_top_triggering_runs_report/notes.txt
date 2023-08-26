@@ -1,0 +1,4 @@
+Note the product numbering scheme.  
+This report appears to show to title runs triggering most / most recent payments.
+Granularity on the call and city is lacking within PTV Residuals Titles data set.
+Besides that we likely have run data.

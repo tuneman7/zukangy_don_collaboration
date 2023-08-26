@@ -1,0 +1,4 @@
+[ ]  -- We may need to modify search criteria to differentiate between PTV and non-PTV titles.
+Note "Customer Number" and "Contract Number" -- We must establish equivallents for PTV residuals contracts.
+Note "RuleName" -- We must map internal PTV Residuals Rules to this columnn.
+Note Separation between U.S. and Canada in Media Names.
