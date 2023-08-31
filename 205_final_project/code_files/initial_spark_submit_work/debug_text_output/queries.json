@@ -10,7 +10,7 @@
       },
       {
          "LOOK AT 10 MOST POPULAR SWORDS.sql": "/w205/hive_queries/report_queries/LOOK AT 10 MOST POPULAR SWORDS.sql",
-         "LOOK AT 10 MOST POPULAR SWORDS.sql_content": "\nselect \n    un.parameter_value as sword_name,\n    et.event_type as event,\n    count(un.parameter_value) as popular_sword_count\nfrom \n    all_events et\njoin \n    event_parameters un\non \n    et.event_id = un.event_id\nand \n    un.parameter_name = 'sword_type'\ngroup by \n    un.parameter_value\n    ,et.event_type\norder by \n    count(un.parameter_value) desc"
+         "LOOK AT 10 MOST POPULAR SWORDS.sql_content": "\nselect \n    un.parameter_value as sword_name,\n    et.event_type as event,\n    count(un.parameter_value) as popular_sword_count\nfrom \n    all_events et\njoin \n    event_parameters un\non \n    et.event_id = un.event_id\nand \n    un.parameter_name = 'sword_type'\ngroup by \n    un.parameter_value\n    ,et.event_type\norder by \n    count(un.parameter_value) desc limit 10"
       },
       {
          "GET EVENT TOTALS.sql_content": "select\n    event_type,\n    count(event_type) as event_count\nfrom \n    all_events\ngroup by event_type",
@@ -18,7 +18,7 @@
       },
       {
          "LOOK AT 10 MOST POPULAR GUILDS.sql": "/w205/hive_queries/report_queries/LOOK AT 10 MOST POPULAR GUILDS.sql",
-         "LOOK AT 10 MOST POPULAR GUILDS.sql_content": "select \n    un.parameter_value as guild_name,\n    et.event_type as event,\n    count(un.parameter_value) as popular_guild_count\nfrom \n    all_events et\njoin \n    event_parameters un\non \n    et.event_id = un.event_id\nand \n    un.parameter_name = 'guild_name'\nand \n    et.event_type = 'join_guild'\ngroup by \n    un.parameter_value\n    ,et.event_type\norder by \n    count(un.parameter_value)"
+         "LOOK AT 10 MOST POPULAR GUILDS.sql_content": "select \n    un.parameter_value as guild_name,\n    et.event_type as event,\n    count(un.parameter_value) as popular_guild_count\nfrom \n    all_events et\njoin \n    event_parameters un\non \n    et.event_id = un.event_id\nand \n    un.parameter_name = 'guild_name'\nand \n    et.event_type = 'join_guild'\ngroup by \n    un.parameter_value\n    ,et.event_type\norder by \n    count(un.parameter_value) limit 10"
       },
       {
          "LOOK USER GET CREDIT COUNT.sql": "/w205/hive_queries/report_queries/LOOK USER GET CREDIT COUNT.sql",

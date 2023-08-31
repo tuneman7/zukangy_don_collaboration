@@ -12,3 +12,12 @@ ls
 cat es.sh
 cat my_hive.sh 
 exit
+ls
+exit
+pip install requirements.txt
+pip install --upgrade pip
+python
+clear
+exit
+pip install altair
+exit

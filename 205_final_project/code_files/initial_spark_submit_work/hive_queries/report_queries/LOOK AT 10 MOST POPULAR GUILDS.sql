@@ -16,4 +16,4 @@ group by
     un.parameter_value
     ,et.event_type
 order by 
-    count(un.parameter_value)
+    count(un.parameter_value) limit 10
