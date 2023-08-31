@@ -1,0 +1,20 @@
+select     
+    un.parameter_value as user,     
+    et.event_type as event,    
+    count(un.parameter_value) as user_event_count 
+from     all_events et 
+join      event_parameters un 
+on      
+    et.event_id = un.event_id 
+and     
+    un.parameter_name = 'user' 
+where      
+    un.parameter_name = 'user'
+and     
+    et.event_id = un.event_id 
+group by     
+    un.parameter_value,
+    et.event_type 
+order by     
+    et.event_type,     
+    un.parameter_value 
