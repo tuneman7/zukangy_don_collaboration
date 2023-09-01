@@ -21,3 +21,9 @@ clear
 exit
 pip install altair
 exit
+pip install jupyter_nbextensions_configurator
+pip3 install --upgrade setuptools
+pip install jupyter_nbextensions_configurator
+apt-get install python3-setuptools
+pip3 install hide_code
+exit
